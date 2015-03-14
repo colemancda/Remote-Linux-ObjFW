@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		6E4F4B011AB3F6C300761C0D /* Build */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6E4F4B021AB3F6C300761C0D /* Build configuration list for PBXAggregateTarget "Build" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = Build;
+			productName = Build;
+		};
 		6E7981321AB3E4E100A0AB4B /* Copy Headers */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 6E7981331AB3E4E100A0AB4B /* Build configuration list for PBXAggregateTarget "Copy Headers" */;
@@ -112,6 +122,9 @@
 			attributes = {
 				LastUpgradeCheck = 0620;
 				TargetAttributes = {
+					6E4F4B011AB3F6C300761C0D = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					6E7981321AB3E4E100A0AB4B = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -132,6 +145,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				6E4F4B011AB3F6C300761C0D /* Build */,
 				6E7981321AB3E4E100A0AB4B /* Copy Headers */,
 				6E7981391AB3E50A00A0AB4B /* Index */,
 			);
@@ -166,6 +180,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		6E4F4B031AB3F6C300761C0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6E4F4B041AB3F6C300761C0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		6E7981301AB3E4D100A0AB4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7981461AB3E60E00A0AB4B /* Config.xcconfig */;
@@ -282,6 +310,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E4F4B021AB3F6C300761C0D /* Build configuration list for PBXAggregateTarget "Build" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E4F4B031AB3F6C300761C0D /* Debug */,
+				6E4F4B041AB3F6C300761C0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6E79812F1AB3E4D100A0AB4B /* Build configuration list for PBXProject "Remote Build" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -6,6 +6,6 @@
 //
 //
 
-SSH_IP=192.168.2.7
+REMOTE_IP=192.168.2.7
 
-SSH_USER=root
+REMOTE_USER=root
