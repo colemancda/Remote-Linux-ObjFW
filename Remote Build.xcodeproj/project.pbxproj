@@ -52,6 +52,7 @@
 		6E4F4AFF1AB3F49C00761C0D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
 		6E4F4B051AB3F74D00761C0D /* RemoteBuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RemoteBuild.sh; sourceTree = "<group>"; };
 		6E4F4B071AB400AB00761C0D /* external */ = {isa = PBXFileReference; lastKnownFileType = folder; path = external; sourceTree = "<group>"; };
+		6E4F4B0B1AB4093E00761C0D /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		6E7981461AB3E60E00A0AB4B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		6E7981471AB3E61D00A0AB4B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7981481AB3E70F00A0AB4B /* sysroot */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sysroot; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 		6E79812B1AB3E4D100A0AB4B = {
 			isa = PBXGroup;
 			children = (
+				6E4F4B0B1AB4093E00761C0D /* Makefile */,
 				6E4F4AFE1AB3F48800761C0D /* Source */,
 				6E7981451AB3E5E100A0AB4B /* Build */,
 				6E4F4B0A1AB4010A00761C0D /* Files */,
