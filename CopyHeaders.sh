@@ -10,5 +10,5 @@ rm -rf ./sysroot/*
 mkdir -p sysroot/usr
 mkdir -p sysroot/usr/local
 
-scp -r $REMOTE_USER@$REMOTE_IP:/usr/include ./sysroot/usr/include
-scp -r $REMOTE_USER@$REMOTE_IP:/usr/local/include ./sysroot/usr/local/include
+scp -Cpr $REMOTE_USER@$REMOTE_IP:/usr/include ./sysroot/usr/include
+scp -Cpr $REMOTE_USER@$REMOTE_IP:/usr/local/include ./sysroot/usr/local/include

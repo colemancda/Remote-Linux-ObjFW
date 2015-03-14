@@ -11,6 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 6E4F4B021AB3F6C300761C0D /* Build configuration list for PBXAggregateTarget "Build" */;
 			buildPhases = (
+				6E4F4B061AB3FF3700761C0D /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		6E4F4AFC1AB3EF8A00761C0D /* CopyHeaders.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = CopyHeaders.sh; sourceTree = "<group>"; };
 		6E4F4AFF1AB3F49C00761C0D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
+		6E4F4B051AB3F74D00761C0D /* RemoteBuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RemoteBuild.sh; sourceTree = "<group>"; };
+		6E4F4B071AB400AB00761C0D /* external */ = {isa = PBXFileReference; lastKnownFileType = folder; path = external; sourceTree = "<group>"; };
 		6E7981461AB3E60E00A0AB4B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		6E7981471AB3E61D00A0AB4B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7981481AB3E70F00A0AB4B /* sysroot */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sysroot; sourceTree = "<group>"; };
@@ -66,22 +69,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E4F4AFE1AB3F48800761C0D /* index */ = {
+		6E4F4AFE1AB3F48800761C0D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6E4F4B081AB400CD00761C0D /* external */,
 				6E4F4AFF1AB3F49C00761C0D /* main.m */,
 			);
-			name = index;
+			name = Source;
+			sourceTree = "<group>";
+		};
+		6E4F4B081AB400CD00761C0D /* external */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = external;
+			sourceTree = "<group>";
+		};
+		6E4F4B091AB400E200761C0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E7981471AB3E61D00A0AB4B /* Index */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E4F4B0A1AB4010A00761C0D /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E7981481AB3E70F00A0AB4B /* sysroot */,
+				6E7981491AB3E74F00A0AB4B /* src */,
+				6E4F4B071AB400AB00761C0D /* external */,
+			);
+			name = Files;
 			sourceTree = "<group>";
 		};
 		6E79812B1AB3E4D100A0AB4B = {
 			isa = PBXGroup;
 			children = (
+				6E4F4AFE1AB3F48800761C0D /* Source */,
 				6E7981451AB3E5E100A0AB4B /* Build */,
-				6E4F4AFE1AB3F48800761C0D /* index */,
-				6E7981491AB3E74F00A0AB4B /* src */,
-				6E7981481AB3E70F00A0AB4B /* sysroot */,
-				6E7981471AB3E61D00A0AB4B /* Index */,
+				6E4F4B0A1AB4010A00761C0D /* Files */,
+				6E4F4B091AB400E200761C0D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +118,7 @@
 			children = (
 				6E7981461AB3E60E00A0AB4B /* Config.xcconfig */,
 				6E4F4AFC1AB3EF8A00761C0D /* CopyHeaders.sh */,
+				6E4F4B051AB3F74D00761C0D /* RemoteBuild.sh */,
 			);
 			name = Build;
 			sourceTree = "<group>";
@@ -153,6 +182,19 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6E4F4B061AB3FF3700761C0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./remotebuild.sh;
+		};
 		6E79814A1AB3E8F400A0AB4B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,14 +225,14 @@
 		6E4F4B031AB3F6C300761C0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PRODUCT_NAME)";
 			};
 			name = Debug;
 		};
 		6E4F4B041AB3F6C300761C0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PRODUCT_NAME)";
 			};
 			name = Release;
 		};
@@ -208,6 +250,7 @@
 		};
 		6E7981311AB3E4D100A0AB4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E7981461AB3E60E00A0AB4B /* Config.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
