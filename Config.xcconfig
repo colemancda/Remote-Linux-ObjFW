@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  Remote Build
+//
+//  Created by Alsey Coleman Miller on 3/13/15.
+//
+//
+
+SSH_IP=192.168.2.7
+
+SSH_USER=root
