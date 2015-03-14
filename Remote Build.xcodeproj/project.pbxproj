@@ -193,7 +193,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./remotebuild.sh;
+			shellScript = ./RemoteBuild.sh;
 		};
 		6E79814A1AB3E8F400A0AB4B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

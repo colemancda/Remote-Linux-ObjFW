@@ -11,9 +11,9 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        NSString *hello = @"Hello, World!";
+        OFString *hello = @"Hello, World!";
         
-        printf("%s", hello.UTF8String);
+        printf("%s\n", hello.UTF8String);
     }
     return 0;
 }
