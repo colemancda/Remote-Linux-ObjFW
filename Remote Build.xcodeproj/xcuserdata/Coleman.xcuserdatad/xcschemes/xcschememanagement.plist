@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Build.xcscheme_^#shared#^_</key>
+		<key>Compile.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
@@ -13,6 +13,11 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>Debug.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Index.xcscheme_^#shared#^_</key>
 		<dict>
@@ -23,6 +28,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>6E4F4B011AB3F6C300761C0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E4F4B0D1AB4FE4600761C0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

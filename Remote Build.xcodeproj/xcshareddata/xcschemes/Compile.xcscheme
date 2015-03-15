@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6E4F4B011AB3F6C300761C0D"
-               BuildableName = "Build"
-               BlueprintName = "Build"
+               BuildableName = "Compile"
+               BlueprintName = "Compile"
                ReferencedContainer = "container:Remote Build.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,7 +26,7 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Debug">
+      buildConfiguration = "Default">
       <Testables>
       </Testables>
    </TestAction>
@@ -35,7 +35,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Default"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E4F4B011AB3F6C300761C0D"
-            BuildableName = "Build"
-            BlueprintName = "Build"
+            BuildableName = "Compile"
+            BlueprintName = "Compile"
             ReferencedContainer = "container:Remote Build.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,23 +55,23 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Release"
+      buildConfiguration = "Default"
       debugDocumentVersioning = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6E4F4B011AB3F6C300761C0D"
-            BuildableName = "Build"
-            BlueprintName = "Build"
+            BuildableName = "Compile"
+            BlueprintName = "Compile"
             ReferencedContainer = "container:Remote Build.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Default">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Default"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

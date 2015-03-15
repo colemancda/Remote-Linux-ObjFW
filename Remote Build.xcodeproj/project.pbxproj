@@ -7,16 +7,28 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		6E4F4B011AB3F6C300761C0D /* Build */ = {
+		6E4F4B011AB3F6C300761C0D /* Compile */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 6E4F4B021AB3F6C300761C0D /* Build configuration list for PBXAggregateTarget "Build" */;
+			buildConfigurationList = 6E4F4B021AB3F6C300761C0D /* Build configuration list for PBXAggregateTarget "Compile" */;
 			buildPhases = (
 				6E4F4B061AB3FF3700761C0D /* ShellScript */,
 			);
 			dependencies = (
 			);
-			name = Build;
+			name = Compile;
 			productName = Build;
+		};
+		6E4F4B0D1AB4FE4600761C0D /* Debug */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6E4F4B0E1AB4FE4600761C0D /* Build configuration list for PBXAggregateTarget "Debug" */;
+			buildPhases = (
+				6E4F4B131AB4FE5B00761C0D /* ShellScript */,
+			);
+			dependencies = (
+				6E4F4B121AB4FE5400761C0D /* PBXTargetDependency */,
+			);
+			name = Debug;
+			productName = Debug;
 		};
 		6E7981321AB3E4E100A0AB4B /* Copy Headers */ = {
 			isa = PBXAggregateTarget;
@@ -34,6 +46,16 @@
 /* Begin PBXBuildFile section */
 		6E4F4B001AB3F49C00761C0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4F4AFF1AB3F49C00761C0D /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E4F4B111AB4FE5400761C0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E79812C1AB3E4D100A0AB4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E4F4B011AB3F6C300761C0D;
+			remoteInfo = Build;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6E7981381AB3E50A00A0AB4B /* CopyFiles */ = {
@@ -53,6 +75,7 @@
 		6E4F4B051AB3F74D00761C0D /* RemoteBuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RemoteBuild.sh; sourceTree = "<group>"; };
 		6E4F4B071AB400AB00761C0D /* external */ = {isa = PBXFileReference; lastKnownFileType = folder; path = external; sourceTree = "<group>"; };
 		6E4F4B0B1AB4093E00761C0D /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		6E4F4B0C1AB4FE1A00761C0D /* RemoteDebug.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = RemoteDebug.sh; sourceTree = "<group>"; };
 		6E7981461AB3E60E00A0AB4B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		6E7981471AB3E61D00A0AB4B /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7981481AB3E70F00A0AB4B /* sysroot */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sysroot; sourceTree = "<group>"; };
@@ -121,6 +144,7 @@
 				6E7981461AB3E60E00A0AB4B /* Config.xcconfig */,
 				6E4F4AFC1AB3EF8A00761C0D /* CopyHeaders.sh */,
 				6E4F4B051AB3F74D00761C0D /* RemoteBuild.sh */,
+				6E4F4B0C1AB4FE1A00761C0D /* RemoteDebug.sh */,
 			);
 			name = Build;
 			sourceTree = "<group>";
@@ -156,6 +180,9 @@
 					6E4F4B011AB3F6C300761C0D = {
 						CreatedOnToolsVersion = 6.2;
 					};
+					6E4F4B0D1AB4FE4600761C0D = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					6E7981321AB3E4E100A0AB4B = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -176,7 +203,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E4F4B011AB3F6C300761C0D /* Build */,
+				6E4F4B0D1AB4FE4600761C0D /* Debug */,
+				6E4F4B011AB3F6C300761C0D /* Compile */,
 				6E7981321AB3E4E100A0AB4B /* Copy Headers */,
 				6E7981391AB3E50A00A0AB4B /* Index */,
 			);
@@ -196,6 +224,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = ./RemoteBuild.sh;
+		};
+		6E4F4B131AB4FE5B00761C0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./RemoteDebug.sh;
 		};
 		6E79814A1AB3E8F400A0AB4B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -223,22 +264,30 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6E4F4B121AB4FE5400761C0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E4F4B011AB3F6C300761C0D /* Compile */;
+			targetProxy = 6E4F4B111AB4FE5400761C0D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		6E4F4B031AB3F6C300761C0D /* Debug */ = {
+		6E4F4B031AB3F6C300761C0D /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 			};
-			name = Debug;
+			name = Default;
 		};
-		6E4F4B041AB3F6C300761C0D /* Release */ = {
+		6E4F4B0F1AB4FE4600761C0D /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
 			};
-			name = Release;
+			name = Default;
 		};
-		6E7981301AB3E4D100A0AB4B /* Debug */ = {
+		6E7981301AB3E4D100A0AB4B /* Default */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7981461AB3E60E00A0AB4B /* Config.xcconfig */;
 			buildSettings = {
@@ -248,35 +297,16 @@
 					"./sysroot/**",
 				);
 			};
-			name = Debug;
+			name = Default;
 		};
-		6E7981311AB3E4D100A0AB4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E7981461AB3E60E00A0AB4B /* Config.xcconfig */;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"./sysroot/**",
-				);
-			};
-			name = Release;
-		};
-		6E7981341AB3E4E100A0AB4B /* Debug */ = {
+		6E7981341AB3E4E100A0AB4B /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
-			name = Debug;
+			name = Default;
 		};
-		6E7981351AB3E4E100A0AB4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		6E7981401AB3E50A00A0AB4B /* Debug */ = {
+		6E7981401AB3E50A00A0AB4B /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -315,80 +345,50 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
-			name = Debug;
-		};
-		6E7981411AB3E50A00A0AB4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
+			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E4F4B021AB3F6C300761C0D /* Build configuration list for PBXAggregateTarget "Build" */ = {
+		6E4F4B021AB3F6C300761C0D /* Build configuration list for PBXAggregateTarget "Compile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E4F4B031AB3F6C300761C0D /* Debug */,
-				6E4F4B041AB3F6C300761C0D /* Release */,
+				6E4F4B031AB3F6C300761C0D /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		6E4F4B0E1AB4FE4600761C0D /* Build configuration list for PBXAggregateTarget "Debug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E4F4B0F1AB4FE4600761C0D /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
 		};
 		6E79812F1AB3E4D100A0AB4B /* Build configuration list for PBXProject "Remote Build" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E7981301AB3E4D100A0AB4B /* Debug */,
-				6E7981311AB3E4D100A0AB4B /* Release */,
+				6E7981301AB3E4D100A0AB4B /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Default;
 		};
 		6E7981331AB3E4E100A0AB4B /* Build configuration list for PBXAggregateTarget "Copy Headers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E7981341AB3E4E100A0AB4B /* Debug */,
-				6E7981351AB3E4E100A0AB4B /* Release */,
+				6E7981341AB3E4E100A0AB4B /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Default;
 		};
 		6E79813F1AB3E50A00A0AB4B /* Build configuration list for PBXNativeTarget "Index" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E7981401AB3E50A00A0AB4B /* Debug */,
-				6E7981411AB3E50A00A0AB4B /* Release */,
+				6E7981401AB3E50A00A0AB4B /* Default */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Default;
 		};
 /* End XCConfigurationList section */
 	};
